@@ -1,0 +1,19 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter Car name" formControlName="name">
+    <p class="help-block">please fill the field!</p>
+
+    <div class="form-group">
+        <label for="model">Model</label>
+        <input type="text" class="form-control" id="model" placeholder="Enter model" formControlName="model">
+        <p class="help-block">please fill the field!</p>
+
+    </div>
+    <div class="form-group">
+        <label for="year">Production year</label>
+        <input type="number" class="form-control" id="year" placeholder="Enter year" formControlName="year">
+        <p class="help-block">please fill the field!</p>
+
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit" [class.disabled]="!myForm.valid">
+</form>
